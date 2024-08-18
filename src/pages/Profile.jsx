@@ -1,4 +1,3 @@
-
 import {
   Badge,
   Button,
@@ -57,33 +56,27 @@ export default function Profile() {
   const secondaryTextColor = useColorModeValue('gray.500', 'gray.300');
 
   return (
-    <Center py={8} minH="calc(100vh - 80px)" px={4}>
+    <Center py={8} minH="calc(100vh - 60px)" px={4}>
       <Stack
         borderWidth="1px"
         borderRadius="lg"
-        w={{ base: '90%', sm: '80%', md: '70%', lg: '60%' }}
+        w={{ sm: '100%', md: '80%' }}
+        h={{ sm: 'auto', md: '90%' }}
+        direction={{ base: 'column', md: 'row' }}
         bg={bgColor}
         boxShadow={'2xl'}
         padding={8}
-        spacing={4}
         position="relative">
         <IconButton
           icon={<EditIcon />}
           aria-label="Edit Profile"
           size="sm"
           position="absolute"
-          top={4}
-          right={4}
+          top={2}
+          right={2}
           onClick={onOpen}
         />
-        <Flex
-          flex={1}
-          bg="blue.200"
-          h={{ base: '200px', sm: '250px', md: '300px' }}
-          w="full"
-          mb={{ base: 4, md: 0 }}
-          borderRadius="lg"
-          overflow="hidden">
+        <Flex flex={1} bg="blue.200" h="100%">
           <Image
             objectFit="cover"
             w="100%"
@@ -97,10 +90,9 @@ export default function Profile() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          spacing={4}
           p={4}
-        >
-          <Heading fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }} fontFamily={'body'}>
+          spacing={6}>
+          <Heading fontSize={'3xl'} fontFamily={'body'}>
             {profile.name}
           </Heading>
           <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
@@ -118,7 +110,7 @@ export default function Profile() {
             px={3} mt={2}>
             Education: {profile.education}
           </Text>
-          <Stack align={'center'} justify={'center'} direction={'row'} mt={4} color={"grey"}>
+          <Stack align={'center'} justify={'center'} direction={'row'} mt={6} color={"grey"}>
             {profile.tags.map((tag, index) => (
               <Badge
                 key={index}
@@ -132,10 +124,11 @@ export default function Profile() {
           </Stack>
 
           <Stack
-            width={'full'}
-            direction={{ base: 'column', sm: 'row' }}
-            spacing={4}
+            width={'100%'}
             mt={'2rem'}
+            direction={'row'}
+            padding={2}
+            justifyContent={'space-between'}
             alignItems={'center'}>
             <Button
               flex={1}
