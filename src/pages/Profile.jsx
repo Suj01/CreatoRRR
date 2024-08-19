@@ -28,13 +28,13 @@ export default function Profile() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [profile, setProfile] = useState({
-    name: 'Lindsey James',
-    email: 'lindsey@example.com',
-    username: '@lindsey_jam3s',
-    description: 'Actress, musician, songwriter and artist. PM for work inquiries or #tag me in your posts',
+    name: 'Sneha Patel',
+    email: 'sneha@example.com',
+    username: '@sneha_jam3s',
+    description: 'Food blogger with a focus on traditional and fusion recipes.',
     education: 'Bachelor of Arts in Music',
     bannerImage:
-      'https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
     tags: ['art', 'photography', 'music'],
   });
 
@@ -56,7 +56,7 @@ export default function Profile() {
   const secondaryTextColor = useColorModeValue('gray.500', 'gray.300');
 
   return (
-    <Center py={8} minH="calc(100vh - 60px)" px={4}>
+    <Center py={8}  px={4}>
       <Stack
         borderWidth="1px"
         borderRadius="lg"
@@ -221,3 +221,4 @@ export default function Profile() {
     </Center>
   );
 }
+
